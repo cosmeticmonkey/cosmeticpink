@@ -1,0 +1,217 @@
+/* General */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+/* Navegación */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.logo h1 {
+    font-size: 36px;
+    margin: 0;
+}
+/* Sección Banner */
+.banner {
+    background-color: #d8a7b1;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+.banner h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.banner p {
+    font-size: 18px;
+}
+
+#home.banner {
+    position: relative; /* Necesario para posicionar el contenido sobre el fondo */
+    background-image: url('fondo rosita.png'); /* La imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* Ajusta la altura a la altura de la ventana */
+    display: flex; /* Flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center; /* Centra el texto */
+    padding: 0 20px; /* Añade algo de espacio en los lados para evitar que el texto se toque con los bordes */
+}
+
+#home.banner::before {
+    content: ''; /* Crea un pseudo-elemento */
+    position: absolute; /* Lo coloca sobre la imagen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Filtro oscuro para mejorar la legibilidad del texto */
+}
+
+#home.banner h2, #home.banner p {
+    position: relative; /* Para que el texto esté por encima del pseudo-elemento */
+    color: #fff; /* Blanco para que el texto resalte */
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    margin: 0; /* Elimina márgenes predeterminados */
+}
+
+#home.banner h2 {
+    font-size: 4rem; /* Ajusta el tamaño del título (más grande) */
+    line-height: 1.2; /* Da un poco de espacio entre las líneas */
+}
+
+#home.banner p {
+    font-size: 1.5rem; /* Ajusta el tamaño del subtítulo (más grande para que sea legible) */
+    margin-top: 10px; /* Un pequeño margen superior */
+    line-height: 1.5; /* Ajusta el interlineado para mayor legibilidad */
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #home.banner h2 {
+        font-size: 2.5rem; /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    #home.banner p {
+        font-size: 1rem; /* Reduce el tamaño del subtítulo en pantallas pequeñas */
+    }
+}
+
+
+/* Sección Productos */
+.productos {
+    padding: 30px;
+    text-align: center;
+}
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+}
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.product-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.product-card p {
+    font-size: 16px;
+    color: #888;
+}
+.product-card .btn {
+    background-color: #d8a7b1;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product-card .btn:hover {
+    background-color: #c08890;
+}
+/* Carrito */
+.cart {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    display: none;
+}
+.cart h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.cart ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.cart button {
+    background-color: #d8a7b1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cart button:hover {
+    background-color: #c08890;
+}
+/* Formulario de Contacto */
+.contacto {
+    padding: 30px;
+    background-color: #fff;
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+#contact-form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+#contact-form input, #contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#contact-form button {
+    background-color: #d8a7b1;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#contact-form button:hover {
+    background-color: #c08890;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}

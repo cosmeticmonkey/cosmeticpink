@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmeticos Belleza</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#acerca">Acerca de</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <h1>Cosmeticos Belleza</h1>
+        </div>
+    </header>
+    <!-- Sección de Bienvenida -->
+    <section id="home" class="banner">
+        <h2>Bienvenida a Cosmeticos Belleza</h2>
+        <p>La mejor calidad en productos de belleza para ti</p>
+    </section>
+    <!-- Productos -->
+    <section id="productos" class="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="product-list">
+            <div class="product-card">
+                <img src="crema rosita.jpg" alt="Producto 1">
+                <h3>Crema Hidratante</h3>
+                <p>$20.00</p>
+                <button class="btn" onclick="addToCart('Crema Hidratante', 20)">Agregar al carrito</button>
+            </div>
+            <div class="product-card">
+                <img src="base rosita.jpeg" alt="Producto 2">
+                <h3>Base Líquida</h3>
+                <p>$25.00</p>
+                <button class="btn" onclick="addToCart('Base Líquida', 25)">Agregar al carrito</button>
+            </div>
+            <div class="product-card">
+                <img src="labial.jpg" alt="Producto 3">
+                <h3>Labial Matte</h3>
+                <p>$15.00</p>
+                <button class="btn" onclick="addToCart('Labial Matte', 15)">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+    <!-- Acerca de -->
+    <section id="acerca" class="acerca">
+        <h2>Acerca de Nosotros</h2>
+        <p>En Cosmeticos Belleza nos dedicamos a ofrecer los mejores productos de belleza para que puedas sentirte y lucir increíble. Nuestra misión es proporcionar productos de alta calidad a precios accesibles.</p>
+    </section>
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <form id="contact-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+    <!-- Carrito de compras -->
+    <div id="cart" class="cart">
+        <h3>Carrito de Compras</h3>
+        <ul id="cart-items"></ul>
+        <p><strong>Total:</strong> $<span id="total-price">0</span></p>
+        <button class="btn" onclick="checkout()">Proceder a la compra</button>
+    </div>
+    <footer>
+        <p>&copy; 2024 Cosmeticos Belleza. Todos los derechos reservados.</p>
+    </footer>
+    <script src=".js"></script>
+</body>
+</html>
